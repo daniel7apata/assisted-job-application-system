@@ -1,7 +1,6 @@
 
 # Backend Requirements (`backend/requirements.txt`)
 
-
 fastapi
 uvicorn
 sqlalchemy
@@ -11,7 +10,6 @@ mangum
 
 
 # Frontend Requirements (`frontend/requirements.txt`)
-
 
 # Artificial Intelligence and NLP
 openai
@@ -33,3 +31,4 @@ soundfile
 # Utilities and Documents
 python-dotenv
 python-docx
+
