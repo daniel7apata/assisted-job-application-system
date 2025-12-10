@@ -1,13 +1,28 @@
-# Inteligencia Artificial y PLN
+
+# Backend Requirements (`backend/requirements.txt`)
+
+
+fastapi
+uvicorn
+sqlalchemy
+pymysql
+pydantic
+mangum
+
+
+# Frontend Requirements (`frontend/requirements.txt`)
+
+
+# Artificial Intelligence and NLP
 openai
 google-cloud-speech
 
-# Interfaz de usuario y web
+# User Interface and Web
 streamlit
 requests
 beautifulsoup4
 
-# Audio y Voz
+# Audio and Voice
 gTTS
 sounddevice
 scipy
@@ -15,6 +30,6 @@ numpy
 noisereduce
 soundfile
 
-# Utilidades y Documentos
+# Utilities and Documents
 python-dotenv
 python-docx
