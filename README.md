@@ -1,5 +1,3 @@
-El siguiente es el archivo `README` generado en inglés, basado en los archivos de su proyecto:
-
 # Assisted Job Application System
 
 ## Overview
@@ -45,53 +43,13 @@ The **Assisted Job Application System** is a voice-controlled application design
 | **AI/NLU** | OpenAI (GPT-4.1-nano) | Handles intent classification and intelligent text refinement. |
 | **Document Generation** | python-docx | Generates the professional CV document. |
 
-## Installation and Setup
 
-### 1\. Prerequisites
+### Prerequisites
 
   * Python 3.11
   * An active **AWS RDS** MySQL instance (or local MySQL setup).
   * **Google Cloud Project** with Speech-to-Text API enabled.
   * **OpenAI API Key**.
-
-### 2\. Backend Setup
-
-1.  **Navigate to the backend directory and install dependencies:**
-    ```bash
-    cd backend
-    pip install -r requirements.txt
-    ```
-    *(Required packages: `fastapi`, `uvicorn`, `sqlalchemy`, `pymysql`, `pydantic`, `mangum`)*.
-2.  **Configure Database:**
-    Edit `backend/database.py` to set your MySQL connection string (`DATABASE_URL`).
-    *Example connection string format:*
-    ```python
-    DATABASE_URL = "mysql+pymysql://admin:Farjevasquez16*@mi-base-empleo.ch0u86saacoy.us-east-2.rds.amazonaws.com:3306/mi_base_datos"
-    ```
-3.  **Run the API locally (or deploy to Lambda):**
-    ```bash
-    # This will automatically create the database tables on first run (via models.Base.metadata.create_all)
-    uvicorn main:app --reload
-    ```
-    *For AWS Lambda deployment, use the provided `Dockerfile` and `Mangum` handler: `CMD ["main.handler"]`*.
-
-### 3\. Frontend Setup
-
-1.  **Navigate to the frontend directory and install dependencies:**
-    ```bash
-    cd ../frontend
-    pip install -r requirements.txt
-    ```
-    *(Key packages: `streamlit`, `openai`, `google-cloud-speech`, `gTTS`, `python-docx`, `beautifulsoup4`, etc.)*.
-2.  **Configure Environment Variables:**
-    Ensure the following environment variables are set in your execution environment (or `.env` file):
-      * `OPENAI_API_KEY`
-      * `GOOGLE_APPLICATION_CREDENTIALS` (path to your GCP service account JSON key)
-      * **API Base URL:** If running the backend locally, you must update the `BASE_URL` constant in `frontend/prototipo.py` to your local FastAPI address. If using the deployed AWS API Gateway, the hardcoded URL is `https://q10bp8maag.execute-api.us-east-2.amazonaws.com/`.
-3.  **Run the Streamlit application:**
-    ```bash
-    streamlit run prototipo.py
-    ```
 
 ## Usage
 
